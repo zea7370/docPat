@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+<link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Doctor–Patient App</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+  <script>const EMERGENCY = "{{ emergency }}";</script>
+</head>
+<body class="theme-dark">
+  <header class="topbar">
+    <div class="brand">Doctor–Patient Management</div>
+    <div class="controls">
+      <button id="toggle-theme">Toggle Light/Dark</button>
+      <a href="tel:{{ emergency }}" class="emergency">Emergency: {{ emergency }}</a>
+    </div>
+  </header>
+
+  <main class="container">
+    {% with messages = get_flashed_messages(with_categories=true) %}
+      {% if messages %}
+        <div class="flash-area">
+          {% for cat, msg in messages %}
+            <div class="flash {{ cat }}">{{ msg }}</div>
+          {% endfor %}
+        </div>
+      {% endif %}
+    {% endwith %}
+    {% block content %}{% endblock %}
+  </main>
+
+  <footer class="footer">
+    Demo model · Simulated data · For learning purposes
+  </footer>
+<script>
+    document.getElementById('toggle-theme').addEventListener('click', () => {
+      document.body.classList.toggle('theme-dark');
+    });
+  </script>
+  <script src="{{ url_for('static', filename='js/queue.js') }}"></script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+Doctor_ID,Name,Specialization,Hospital,Consultation_Fees,Available_Timings
+DOC001,Allison Hill,Dermatology,City Hospital,100,9:00-17:00
+DOC002,Noah Rhodes,Neurology,City Hospital,0,12:00-19:00
+DOC003,Angie Henderson,Cardiology,City Hospital,0,9:00-17:00
+DOC004,Daniel Wagner,Cardiology,Lakeside Hospital,50,12:00-19:00
+DOC005,Cristian Santos,Pediatrics,Downtown Health Hub,100,8:00-17:00
+DOC006,Connie Lawrence,Psychiatry,Sunrise Medical Center,100,9:00-17:00
+DOC007,Abigail Shaffer,General Medicine,City Hospital,0,11:00-16:00
+DOC008,Gina Moore,General Medicine,Sunrise Medical Center,100,8:00-19:00
+DOC009,Gabrielle Davis,Dermatology,Downtown Health Hub,0,12:00-18:00
+DOC010,Ryan Munoz,General Medicine,Lakeside Hospital,50,8:00-16:00
+DOC011,Monica Herrera,Pediatrics,Sunrise Medical Center,0,9:00-16:00
+DOC012,Jamie Arnold,Psychiatry,Sunrise Medical Center,150,10:00-17:00
+DOC013,Lisa Hensley,General Medicine,Sunrise Medical Center,50,10:00-16:00
+DOC014,Michele Williams,Neurology,Lakeside Hospital,50,9:00-19:00
+DOC015,Dylan Miller,Psychiatry,Sunrise Medical Center,50,10:00-16:00
+DOC016,Brian Ramirez,Pediatrics,City Hospital,100,11:00-18:00
+DOC017,Holly Wood,Dermatology,Green Valley Clinic,100,9:00-19:00
+DOC018,Derek Zuniga,Psychiatry,Downtown Health Hub,50,10:00-17:00
+DOC019,Lisa Jackson,Pediatrics,Lakeside Hospital,100,12:00-19:00
+DOC020,Carla Gray,Psychiatry,Sunrise Medical Center,50,9:00-20:00
+DOC021,Margaret Hawkins DDS,Gynecology,City Hospital,0,8:00-17:00
+DOC022,Patty Perez,Neurology,Downtown Health Hub,0,11:00-19:00
+DOC023,Ethan Adams,Gynecology,Lakeside Hospital,100,12:00-16:00
+DOC024,Tommy Walter,Dermatology,Lakeside Hospital,100,10:00-16:00
+DOC025,Matthew Foster,Orthopedics,Downtown Health Hub,50,11:00-16:00
+DOC026,Judy Baker,Orthopedics,Lakeside Hospital,50,12:00-16:00
+DOC027,Justin Baker,Orthopedics,Lakeside Hospital,50,9:00-18:00
+DOC028,Stephanie Ross,Neurology,Lakeside Hospital,0,12:00-18:00
+DOC029,Zachary Hicks,Gynecology,City Hospital,0,10:00-18:00
+DOC030,Anthony Rodriguez,Pediatrics,City Hospital,50,12:00-16:00

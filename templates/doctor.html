@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>{{ doctor.Name }} — {{ doctor.Specialization }}</h2>
+<p><strong>Hospital:</strong> {{ doctor.Hospital }} | <strong>Fees:</strong> {{ doctor.Consultation_Fees }} ₹</p>
+<p><strong>Timings:</strong> {{ doctor.Available_Timings }}</p>
+<a class="btn" href="{{ url_for('book', doctor_id=doctor.Doctor_ID) }}">Book Appointment</a>
+
+<h3>Today's Queue</h3>
+<div id="queue-area">
+  {% if queue %}
+    <ol>
+      {% for q in queue %}
+        <li>{{ q.Name }} ({{ q.Patient_ID }}) — Position {{ q.Queue_Position }}</li>
+      {% endfor %}
+    </ol>
+  {% else %}
+    <p>No queue for today.</p>
+  {% endif %}
+</div>
+
+<h3>Upcoming Booked Appointments</h3>
+<ul>
+  {% for appt in upcoming %}
+    <li>{{ appt.DateTime }} — {{ appt.Name }} ({{ appt.Patient_ID }}) — {{ appt.Status }}</li>
+  {% else %}
+    <li>No upcoming appointments.</li>
+  {% endfor %}
+</ul>
+
+<script>
+  // start polling queue endpoint every 10s for live update
+  startQueuePolling("{{ doctor.Doctor_ID }}", "#queue-area");
+</script>
+{% endblock %}

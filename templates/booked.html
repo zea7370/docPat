@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Booking Confirmed</h2>
+<p>Appointment ID: {{ appointment.Appointment_ID }}</p>
+<p>Doctor: {{ doctor.Name }}</p>
+<p>Date & Time: {{ appointment.DateTime }}</p>
+<p>Status: {{ appointment.Status }}</p>
+<p>Emergency: <a href="tel:{{ emergency }}">{{ emergency }}</a></p>
+<a class="btn" href="{{ url_for('doctor_profile', doctor_id=doctor.Doctor_ID) }}">Back to Doctor</a>
+{% endblock %}

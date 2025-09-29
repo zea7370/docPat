@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Available Doctors</h1>
+<div class="grid">
+  {% for d in doctors %}
+    <div class="card">
+      <h3>{{ d.Name }}</h3>
+      <p><strong>Specialization:</strong> {{ d.Specialization }}</p>
+      <p><strong>Hospital:</strong> {{ d.Hospital }}</p>
+      <p><strong>Timings:</strong> {{ d.Available_Timings }}</p>
+      <p><strong>Fees:</strong> {{ d.Consultation_Fees }} ₹</p>
+      <p><strong>Booked:</strong> {{ d.Booked_Count }}</p>
+      <a class="btn" href="{{ url_for('doctor_profile', doctor_id=d.Doctor_ID) }}">View Profile</a>
+      <a class="btn ghost" href="{{ url_for('book', doctor_id=d.Doctor_ID) }}">Book</a>
+    </div>
+  {% endfor %}
+</div>
+{% endblock %}

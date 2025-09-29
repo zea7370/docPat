@@ -1,0 +1,16 @@
+
+{% extends "base.html" %}
+{% block content %}
+<h2>Book Appointment — {{ doctor.Name }}</h2>
+<form method="post" class="form">
+  <label>Patient Full Name <input name="patient_name" required></label>
+  <label>Age <input name="age" type="number" min="0"></label>
+  <label>Contact (phone/email) <input name="contact" required></label>
+  <label>Date <input name="date" type="date" required></label>
+  <label>Time <input name="time" type="time" required></label>
+  <div class="form-actions">
+    <button class="btn" type="submit">Book</button>
+    <a class="btn ghost" href="{{ url_for('doctor_profile', doctor_id=doctor.Doctor_ID) }}">Cancel</a>
+  </div>
+</form>
+{% endblock %}
